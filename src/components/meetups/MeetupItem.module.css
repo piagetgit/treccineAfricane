@@ -2,8 +2,8 @@
 	box-sizing: border-box;
 }
 
-.item {
-	margin: 1rem 10;
+.list-inline-item {
+	margin: 10rem 10;
 }
 .card1 {
 	background-color: red;

@@ -1,4 +1,4 @@
-import { Link }  from 'react-router-dom';
+
 import classes from './MainNavigation.module.css'
 import {Navbar, Container, Nav, Form, FormControl, Button} from 'react-bootstrap';
 
@@ -26,13 +26,13 @@ function MainNavigation(){
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 
-                <Nav className={classes.meauto}>
-                <Nav.Link href="/">All Braids</Nav.Link>
-                <Nav.Link href="/new-meetup">Lastest Braids</Nav.Link>
-                <Nav.Link href="/new-meetup">Polpulars Braids </Nav.Link>
+                <Nav col="md-3" >
+                    <Nav.Link href="/">All Braids</Nav.Link>
+                    <Nav.Link href="/new-meetup">Lastest Braids</Nav.Link>
+                    <Nav.Link href="/new-meetup">Polpulars Braids </Nav.Link>
                 </Nav>
 
-                <Nav className={classes.formSeach}>
+                <Nav >
                     <Form className="d-flex">
                         <FormControl
                             type="search"

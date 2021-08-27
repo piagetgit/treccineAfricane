@@ -8,8 +8,8 @@ function MeetupList(props){
         <h1 className={classes.logo}>All Braids</h1>
          <Row>
              {props.meetups.map(meetup =>
-                 <Col >
-                        <MeetupItem key={meetup.id}
+                 <Col  md={4}>
+                        <MeetupItem key={meetup.id} 
                             id={meetup.id} 
                             image={meetup.image}
                             title={meetup.title}
@@ -17,8 +17,7 @@ function MeetupList(props){
                             address={meetup.address}             
                          />  
                 </Col>
-            )
-            }
+            )}
         </Row>
     </Container> 
     );
