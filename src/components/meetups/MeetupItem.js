@@ -35,7 +35,7 @@ function MeetupItem(props){
                 </div>
              
                 <div className={classes.actions}>
-                    <button onClick={toggleDetailsStatusHandler}>Details</button>
+                    <button onClick={toggleDetailsStatusHandler}>Detais</button>
                 </div>
             </Card>
     </li>;

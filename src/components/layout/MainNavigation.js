@@ -19,7 +19,7 @@ function MainNavigation(){
           </header>;*/
 
     return (
-    <Navbar className={classes.navbar} collapseOnSelect expand="md" sticky="top">
+    <Navbar className={classes.navbar} collapseOnSelect expand="md">
         <Container>
             <Navbar.Brand href="/" className={classes.logo}>Treccine Africane Ferrara</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
