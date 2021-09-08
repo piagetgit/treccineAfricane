@@ -22,9 +22,9 @@ function NewMeetUpPage(){
     }
 
     return <section>
-            <h1> Add MeetUp  </h1>
-            <NewMeetupFom onAddMeetup={addMeetupHandler} />
+            <h1> latest-braids </h1>
+            
         </section>;
 }
-
+////<NewMeetupFom onAddMeetup={addMeetupHandler} />
 export default NewMeetUpPage;

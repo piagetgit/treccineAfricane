@@ -3,18 +3,24 @@ import MeetupItem from './MeetupItem';
 import {Row ,Col, Container} from 'react-bootstrap'
 
 function MeetupList(props){
+    console.log(props);
    return(
     <Container>
         <h1 className={classes.logo}>All Braids</h1>
          <Row>
              {props.meetups.map(meetup =>
-                 <Col  md={4}>
+                 <Col className="col-sm-3">
                         <MeetupItem key={meetup.id} 
                             id={meetup.id} 
-                            image={meetup.image}
+                            image={meetup.urlImage}
                             title={meetup.title}
                             description={meetup.description}
-                            address={meetup.address}             
+                            holdingTime={meetup.holdingTime}     
+                            baseColor={meetup.baseColor}    
+                            date={meetup.date}        
+                            makingTime={meetup.makingTime} 
+                            price={meetup.price}  
+                            
                          />  
                 </Col>
             )}

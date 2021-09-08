@@ -16,7 +16,7 @@ function App() {
           <AllMeetUpPage/>
         </Route>
 
-        <Route path='/new-meetup'>
+        <Route path='/latest-braids'>
           <NewMeetUpPage/>
         </Route>
 

@@ -1,11 +1,6 @@
 * {
 	box-sizing: border-box;
 }
-.card {
-	list-style: none;
-	margin: 20px;
-	padding: 10px;
-}
 
 .logo {
 	font-family: cursive;

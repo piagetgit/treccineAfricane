@@ -7,7 +7,7 @@ function MeetupItem(props){
     const favoritesCtx= useContext(FavoritesContext);
     const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
 
-    function toggleDetailsStatusHandler(){
+    /*function toggleDetailsStatusHandler(){
         if(itemIsFavorite){
             favoritesCtx.removeFavorite(props.id);
         }else{
@@ -16,12 +16,11 @@ function MeetupItem(props){
                 id:props.id,
                 title:props.title,
                 description:props.description,
-                image:props.image,
-                address:props.address
+                image:props.urlImage
             });
         }
         
-    }
+    }*/
 
 
     return <li className="list-inline-item">
@@ -32,11 +31,13 @@ function MeetupItem(props){
                 <div className={classes.content} bg="#ff3300">
                     <h3>{props.title}</h3>
                     <p>{props.description}</p>
+                   
                 </div>
              
                 <div className={classes.actions}>
-                    <button onClick={toggleDetailsStatusHandler}>Detais</button>
+                    <button onClick="{toggleDetailsStatusHandler}">Detais</button>
                 </div>
+                
             </Card>
             <p></p> 
             <p></p>

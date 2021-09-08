@@ -26,9 +26,10 @@ function MainNavigation(){
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 
+            
                 <Nav col="md-3" >
                     <Nav.Link href="/">All Braids</Nav.Link>
-                    <Nav.Link href="/new-meetup">Lastest Braids</Nav.Link>
+                    <Nav.Link href="/latest-braids">Lastest Braids</Nav.Link>
                     <Nav.Link href="/new-meetup">Polpulars Braids </Nav.Link>
                 </Nav>
 
@@ -43,6 +44,7 @@ function MainNavigation(){
                         <Button className={classes.search} >Search</Button>
                     </Form>
                 </Nav>
+
             </Navbar.Collapse>
         </Container>
     </Navbar>
