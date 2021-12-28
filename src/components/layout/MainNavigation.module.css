@@ -13,10 +13,11 @@
 	text-align: center;
 }
 .content {
+	width: 100%;
+	overflow: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 30px 10%;
 }
 
 .search {

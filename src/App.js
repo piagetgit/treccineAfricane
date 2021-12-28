@@ -1,8 +1,8 @@
 import { Route ,Switch}  from 'react-router-dom';
 
-import AllMeetUpPage from './pages/AllMeetUps';
+import AllBraidPage from './pages/AllBraids';
 import FavoritesPage from './pages/Favorites';
-import NewMeetUpPage from './pages/NewMeetUp';
+import LatestBraids from './pages/LatestBraids';
 //import MainNavigation from './components/layout/MainNavigation'
 import Layout from './components/layout/Layout';
 
@@ -13,11 +13,11 @@ function App() {
     <Layout>
       <Switch>
         <Route path='/' exact>
-          <AllMeetUpPage/>
+          <AllBraidPage/>
         </Route>
 
         <Route path='/latest-braids'>
-          <NewMeetUpPage/>
+          <LatestBraids/>
         </Route>
 
         <Route path='/favorites'>
