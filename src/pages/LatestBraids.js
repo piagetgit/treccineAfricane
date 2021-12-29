@@ -40,8 +40,12 @@ function LatestBraid() {
 
       setIsLoading(false);
 
+      const sortedBraids = braids.sort((braid1, braid2) => {
+        return new Date(braid1.createdAt).getTime() - new Date(braid2.createdAt).getTime()
+      }).reverse();
 
-      setLoadedBraids(braids);
+      console.log(sortedBraids);
+      setLoadedBraids(sortedBraids);
     });
 
 
