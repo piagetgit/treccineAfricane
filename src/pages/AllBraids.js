@@ -35,8 +35,9 @@ function AllBraidPage() {
          title:key["title"]*/
         };
 
-        braids.push(b);
-        //console.log(b);
+        if (b.visible)
+          braids.push(b);
+        console.log(b);
       }
 
       setIsLoading(false);
