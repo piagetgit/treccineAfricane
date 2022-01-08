@@ -1,10 +1,23 @@
 import classes from './BraidItem.module.css';
-import Details from './Details';
-//import { useNavigate } from "react-router-dom";
 
+import { useHistory } from "react-router-dom";
+import { useContext } from 'react';
 import Card from '../ui/Card';
+import Details from '../../pages/Details';
+
+import { DetailsContext } from "./../../store/DetailsContext";
+
+
 
 function BraidItem(props) {
+    const history = useHistory();
+    const { braid, setBraid } = useContext(DetailsContext);
+    function detailFunction(props) {
+        setBraid(props);
+        history.push("/details");
+    };
+
+
     return <li className="list-inline-item">
         <Card >
             <div className={classes.image}>
@@ -17,9 +30,8 @@ function BraidItem(props) {
             </div>
 
             <div className={classes.actions}>
-                <button onClick="{toggleDetailsStatusHandler}">Detais</button>
+                <button onClick={() => detailFunction(props)}>Details</button>
             </div>
-
         </Card>
         <p></p>
         <p></p>

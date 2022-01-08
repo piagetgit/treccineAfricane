@@ -5,20 +5,30 @@ import AllBraidPage from './pages/AllBraids';
 import LatestBraids from './pages/LatestBraids';
 //import MainNavigation from './components/layout/MainNavigation'
 import Layout from './components/layout/Layout';
-
-
+import Details from './pages/Details';
+import { DetailsContext } from './store/DetailsContext';
+import { useState } from 'react';
 
 function App() {
+  const [braid, setBraid] = useState('hello');
+
   return (
     <Layout>
       <Switch>
-        <Route path='/' exact>
-          <AllBraidPage />
-        </Route>
+        <DetailsContext.Provider value={{ braid, setBraid }}>
+          <Route path='/' exact>
+            <AllBraidPage />
+          </Route>
 
-        <Route path='/latest-braids'>
-          <LatestBraids />
-        </Route>
+          <Route path='/latest-braids'>
+            <LatestBraids />
+          </Route>
+
+
+          <Route path='/details'>
+            <Details />
+          </Route>
+        </DetailsContext.Provider>
 
 
       </Switch>
