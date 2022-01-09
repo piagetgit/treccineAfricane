@@ -42,7 +42,7 @@ function AllBraidPage() {
 
         if (b.visible)
           braids.push(b);
-        console.log(b);
+        //console.log(b);
 
       }
 
@@ -63,7 +63,7 @@ function AllBraidPage() {
   }
 
   return <div >
-    <BraidList braids={loadedBraids} />
+    <BraidList nameOfPage="All Braids" braids={loadedBraids} />
   </div>;
 }
 

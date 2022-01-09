@@ -59,7 +59,7 @@ function LatestBraid() {
   }
 
   return <div >
-    <BraidList braids={loadedBraids} />
+    <BraidList nameOfPage="Latest Braids" braids={loadedBraids} />
   </div>;
 }
 
