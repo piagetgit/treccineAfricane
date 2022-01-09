@@ -16,7 +16,7 @@ function BraidItem(props) {
         setBraid(props);
         history.push("/details");
     };
-
+    //<p>{props.description}</p>
 
     return <li className="list-inline-item">
         <Card >
@@ -25,7 +25,8 @@ function BraidItem(props) {
             </div>
             <div className={classes.content} bg="#ff3300">
                 <h3>{props.title}</h3>
-                <p>{props.description}</p>
+                <p>{props.price} €</p>
+
 
             </div>
 

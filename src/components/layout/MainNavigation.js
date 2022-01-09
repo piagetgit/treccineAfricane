@@ -1,11 +1,38 @@
 
 import classes from './MainNavigation.module.css'
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
-
-
+import { UseRef } from 'react';
+import { DetailsContext } from "./../../store/DetailsContext";
+import { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BraidList from './../braids/BraidList';
 
 function MainNavigation() {
+    /*const query = UseRef();*/
+    const { allBraids, setAllBraids } = useContext(DetailsContext);
+
+    function hanldeSearch(e) {
+        e.preventDefault();
+        console.log(e.target.value);
+
+        const searchBraids = allBraids.map(braid => {
+            if (braid !== undefined && braid.title.toLowerCase().includes(e.target.value.toLowerCase())) {
+                console.log("title:" + braid.title);
+                return braid;
+            }
+        })
+
+        const searchBraidsREs = searchBraids.filter(function (el) { return el !== undefined })
+        console.log(searchBraidsREs);
+
+        //setAllBraids(searchBraids);
+
+        /*
+                return <div >
+                    <BraidList braids={searchBraidsREs} />
+                </div>;
+        */
+    }
     return (
         <Navbar className={classes.navbar} collapseOnSelect expand="md">
             <Container className={classes.content}>
@@ -17,12 +44,12 @@ function MainNavigation() {
 
                         <Nav.Link href="/">All Braids</Nav.Link>
                         <Nav.Link href="/latest-braids">Lastest Braids</Nav.Link>
-                        <Nav.Link href="#">Polpulars Braids </Nav.Link>
+                        <Nav.Link href="/popular-braids">Populars Braids </Nav.Link>
 
                         <Form className="d-flex">
-                            <FormControl
+                            <FormControl onChange={e => hanldeSearch(e)}
                                 type="search"
-                                placeholder="Search"
+                                placeholder="Search by Title"
                                 className="mr-2"
                                 aria-label="Search"
                             />
